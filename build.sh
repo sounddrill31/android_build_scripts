@@ -8,7 +8,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 
 
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
-crave run --no-patch -- "rm -rf .repo/local_manifests && \
+crave run --no-patch --clean -- "rm -rf .repo/local_manifests && \
 # Remove these from previous runs
 #rm -rf frameworks/base vendor/plros/prebuilt/apps/Cromite ; \
 #cd packages/apps/Settings; git restore ; cd ../../.. \
