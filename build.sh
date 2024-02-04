@@ -41,7 +41,10 @@ source build/envsetup.sh && \
 lunch lineage_oxygen-userdebug && \
 
 # Build the ROM
-mka bacon"
+mka bacon && \
+echo "Date and time:" && \
+# Print out/build_date.txt
+cat out/build_date.txt"
 
 # Clean up
 rm -rf oxygen
