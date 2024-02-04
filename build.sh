@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+#set -e
 #Credit to Meghthedev for the initial script 
 
 # Create and Enter Lineage folder
