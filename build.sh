@@ -1,11 +1,7 @@
 #!/bin/bash
 
-#set -e
+set -e
 #Credit to Meghthedev for the initial script 
-
-# Create and Enter Lineage folder
-mkdir Lineage;
-cd Lineage;
 
 # Initialize repo with specified manifest
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
