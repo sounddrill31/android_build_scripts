@@ -11,4 +11,4 @@ or, if you have one running
 ```mkdir lineage; cd lineage```
 
 ## Pull and Run this script
-```$ curl -sf https://github.com/sounddrill31/android_build_scripts/raw/lineage-oxygen/build.sh | sh```
+```$ curl -sf https://raw.githubusercontent.com/sounddrill31/android_build_scripts/lineage-oxygen/build.sh | sh```
