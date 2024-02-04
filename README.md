@@ -2,8 +2,9 @@
 Build scripts to compile android with crave
 
 ##Open Tmux
+
 ```tmux```
-or, if you have one running
+or if you have one running,
 ```tmux ls```
 ```tmux a -t <session number>```
 
