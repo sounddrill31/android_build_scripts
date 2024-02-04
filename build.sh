@@ -21,12 +21,12 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \
 # Apply microG patch to Settings app
 wget -O packages/apps/Settings/microG.patch https://github.com/Divested-Mobile/DivestOS-Build/raw/master/Patches/LineageOS-20.0/android_packages_apps_Settings/0016-microG_Toggle.patch && \
 cd packages/apps/Settings  && \
-git patch -p1 -i *.patch && \
+patch -p1 -i *.patch && \
 cd ../../.. && \
 # Apply microG patch to frameworks/base
 wget -O frameworks/base/microG.patch https://github.com/Divested-Mobile/DivestOS-Build/raw/master/Patches/LineageOS-20.0/android_frameworks_base/0036-Unprivileged_microG_Handling.patch && \
 cd frameworks/base && \
-git patch -p1 -i *.patch && \
+patch -p1 -i *.patch && \
 cd ../.. && \
 # Clone Cromite app
 git clone https://gitlab.com/plros-lab/android_packages_apps_Cromite.git vendor/plros/prebuilt/apps/Cromite && \
