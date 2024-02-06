@@ -16,6 +16,7 @@ git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lineage-o
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 # Clone Cromite app
+rm -rf vendor/plros/prebuilt/apps/Cromite;
 git clone https://gitlab.com/plros-lab/android_packages_apps_Cromite.git vendor/plros/prebuilt/apps/Cromite && \
 # Set up build environment
 source build/envsetup.sh && \
