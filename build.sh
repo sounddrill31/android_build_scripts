@@ -22,13 +22,13 @@ git clone https://gitlab.com/plros-lab/android_packages_apps_Cromite.git vendor/
 cd frameworks/base && \
 git restore .  && \
 wget -O microG.patch https://github.com/lineageos4microg/docker-lineage-cicd/raw/master/src/signature_spoofing_patches/android_frameworks_base-Android13.patch && \
-patch -p1 -i *.patch && \
+patch -p1 -i microG.patch && \
 cd ../.. && \
 # Apply microG patch to packages/modules/Permission
 cd packages/modules/Permission && \
 git restore .  && \
 wget -O microG.patch https://github.com/lineageos4microg/docker-lineage-cicd/raw/master/src/signature_spoofing_patches/packages_modules_Permission-Android13.patch && \
-patch -p1 -i *.patch && \
+patch -p1 -i microG.patch && \
 cd ../../.. && \
 # Set up build environment
 source build/envsetup.sh && \
