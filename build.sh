@@ -55,3 +55,6 @@ crave pull out/target/product/*/*.img
 
 # Upload zips to Telegram
 telegram-upload --to sdreleases oxygen/*.zip
+
+#Upload to Github Releases
+curl -sf https://raw.githubusercontent.com/Meghthedev/Releases/main/headless.sh | sh
