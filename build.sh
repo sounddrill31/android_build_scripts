@@ -38,7 +38,9 @@ lunch lineage_oxygen-userdebug && \
 mka bacon && \
 echo "Date and time:" && \
 # Print out/build_date.txt
-cat out/build_date.txt"
+cat out/build_date.txt
+# Print SHA256
+sha256sum out/target/product/*/*.zip"
 
 # Clean up
 rm -rf oxygen
