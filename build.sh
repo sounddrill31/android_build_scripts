@@ -14,6 +14,9 @@ repo init -u https://github.com/Evolution-X/manifest -b udc ;\
 # Clone local_manifests repository
 git clone https://github.com/Lafactorial/local_manifest --depth 1 -b Evo-14 .repo/local_manifests ;\
 
+# Removals
+rm -rf system/libhidl
+
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 
