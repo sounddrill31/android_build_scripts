@@ -10,7 +10,14 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 
 # Remove existing local_manifests
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
-repo init --depth=1 -u https://git.libremobileos.com/LMODroid/manifest.git -b thirteen --git-lfs && \
+repo init --depth=1 -u https://github.com/LMODroid/manifest.git -b thirteen --git-lfs && \
+
+# Install xmlstarlet
+sudo apt-get update && \
+sudo apt-get install xmlstarlet -u && \
+
+# Swap mirrors for lmodroid
+xmlstarlet ed --inplace -u '//project[@remote="libremobileos"]/@fetch' -v 'https://github.com' .repo/manifests/snippets/lmodroid.xml ; \
 
 # Clone local_manifests repository
 git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lmodroid-oxygen .repo/local_manifests && \
