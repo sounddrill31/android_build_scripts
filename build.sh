@@ -11,19 +11,15 @@ crave run --no-patch -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
 repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO && \
 #Remove android_vendor_custom-preference
-mkdir -p .repo/local_manifests && echo '<?xml version="1.0" encoding="UTF-8"?> \
-<manifest> \
-<remove-project name="android_vendor_custom-preference"/> \
-</manifest>' > .repo/local_manifests/local_manifest.xml \
+
+# Clone local_manifests repository
+git clone <repo> --depth 1 -b <branch> .repo/local_manifests && \
 
 # Removals
 rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java vendor/qcom/opensource/commonsys-intf/display && \
 
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
-
-# Run sync script
-curl -sf https://raw.githubusercontent.com/phhgsi/scripts/main/sync.sh | sh && \
 
 # Set up build environment
 source build/envsetup.sh && \
