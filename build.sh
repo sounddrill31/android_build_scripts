@@ -15,9 +15,6 @@ repo init --depth=1 -u https://github.com/LMODroid/manifest.git -b thirteen --gi
 # Replace mirrors
 sed -i 's|fetch="https://git.libremobileos.com"|fetch="https://github.com"|g' .repo/manifests/snippets/lmodroid.xml
 
-# Swap mirrors for lmodroid
-xmlstarlet ed --inplace -u '//project[@remote="libremobileos"]/@fetch' -v 'https://github.com' .repo/manifests/snippets/lmodroid.xml ; \
-
 # Clone local_manifests repository
 git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lmodroid-oxygen .repo/local_manifests && \
 
