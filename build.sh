@@ -14,12 +14,11 @@ repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO
 # Removals
 rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java && \
 
-# Run sync script
-curl -sf https://raw.githubusercontent.com/phhgsi/scripts/main/sync.sh | sh && \
-
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 
+# Run sync script
+curl -sf https://raw.githubusercontent.com/phhgsi/scripts/main/sync.sh | sh && \
 
 # Set up build environment
 source build/envsetup.sh && \
