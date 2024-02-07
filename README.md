@@ -9,7 +9,7 @@ or if you have one running,
 ```tmux a -t <session number>```
 
 ## Make and Enter a folder called Lineage
-```mkdir lineage; cd lineage```
+```mkdir arrow; cd arrow```
 
 ## Pull and Run this script
-```$ curl -sf https://raw.githubusercontent.com/sounddrill31/android_build_scripts/lineage-oxygen/build.sh | sh```
+```$ curl -sf https://raw.githubusercontent.com/sounddrill31/android_build_scripts/arrow-MiThoriumSSI/build.sh | sh```
