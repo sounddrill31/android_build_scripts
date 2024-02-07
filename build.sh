@@ -12,7 +12,7 @@ crave run --no-patch -- "rm -rf .repo/local_manifests && \
 repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO
 
 # Removals
-rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java && \
+rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java vendor/qcom/opensource/commonsys-intf/display && \
 
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
