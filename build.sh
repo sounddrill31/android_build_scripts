@@ -10,6 +10,8 @@ set -e
 crave run --no-patch --clean -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
 repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO
+#Remove android_vendor_custom-preference
+sed -i '/<project path="vendor\/custom-preference" name="android_vendor_custom-preference" remote="elixir" clone-depth="1" \/>/d' .repo/manifests/snippets/elxir.xml
 
 # Removals
 rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java vendor/qcom/opensource/commonsys-intf/display && \
