@@ -7,7 +7,7 @@ set -e
 
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
-crave run --no-patch -- "rm -rf .repo/local_manifests && \
+crave run --no-patch --clean -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
 repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO
 
