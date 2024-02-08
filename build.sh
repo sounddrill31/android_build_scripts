@@ -13,7 +13,7 @@ crave run --no-patch --clean -- "rm -rf .repo/manifests .repo/local_manifests ha
 repo init --depth=1 -u https://github.com/burhancodes/lmodroid.git -b thirteen --git-lfs && \
 
 # Replace mirrors
-sed -i 's|fetch="https://git.libremobileos.com"|fetch="https://github.com"|g' .repo/manifests/snippets/lmodroid.xml
+sed -i 's|fetch="https://git.libremobileos.com"|fetch="https://github.com"|g' .repo/manifests/snippets/lmodroid.xml ; \
 
 # Clone local_manifests repository
 git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lmodroid-oxygen .repo/local_manifests && \
