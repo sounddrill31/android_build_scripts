@@ -10,7 +10,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 
 # Remove existing local_manifests
 crave run --no-patch --clean -- "rm -rf .repo/manifests .repo/local_manifests hardware/qcom-caf/msm8953/audio && \
 # Initialize repo with specified manifest
-repo init --depth=1 -u https://github.com/LMODroid/manifest.git -b thirteen --git-lfs && \
+repo init --depth=1 -u https://github.com/burhancodes/lmodroid.git -b thirteen --git-lfs && \
 
 # Replace mirrors
 sed -i 's|fetch="https://git.libremobileos.com"|fetch="https://github.com"|g' .repo/manifests/snippets/lmodroid.xml
