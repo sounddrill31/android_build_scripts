@@ -9,7 +9,7 @@ set -e
 # Remove existing local_manifests
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
-repo init --depth=1 -u https://github.com/projectelixeroscar/manifest -b UNO && \
+repo init --depth=1 -u https://github.com/sounddrill31/local_manifest-2 -b patch-1 && \
 
 # Clone local_manifests repository
 git clone https://github.com/projectelixeroscar/local_manifest.git --depth 1 -b master .repo/local_manifests && \
