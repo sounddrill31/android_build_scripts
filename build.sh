@@ -8,13 +8,13 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 
 
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
-crave run --no-patch --clean -- "rm -rf .repo/local_manifests hardware/qcom-caf/msm8953/audio && \
+crave run --no-patch --clean -- "rm -rf .repo/manifests .repo/local_manifests hardware/qcom-caf/msm8953/audio && \
 # Initialize repo with specified manifest
 repo init --depth=1 -u https://github.com/LMODroid/manifest.git -b thirteen --git-lfs && \
 
 # Replace mirrors
 sed -i 's|fetch="https://git.libremobileos.com"|fetch="https://github.com"|g' .repo/manifests/snippets/lmodroid.xml
-cd .repo/manifests/ && git commit -a -m "Switch Mirror" && cd ../../ ; \
+
 # Clone local_manifests repository
 git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lmodroid-oxygen .repo/local_manifests && \
 
