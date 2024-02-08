@@ -9,11 +9,10 @@ set -e
 # Remove existing local_manifests
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
-repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO && \
-#Remove android_vendor_custom-preference
+repo init --depth=1 -u https://github.com/projectelixeroscar/manifest -b UNO && \
 
 # Clone local_manifests repository
-git clone <repo> --depth 1 -b <branch> .repo/local_manifests && \
+git clone https://github.com/projectelixeroscar/local_manifest.git --depth 1 -b master .repo/local_manifests && \
 
 # Removals
 rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java vendor/qcom/opensource/commonsys-intf/display && \
@@ -26,9 +25,10 @@ source build/envsetup.sh && \
 
 # Lunch configuration and Build
 make clean && \
-lunch derp_oscar-user && \
+lunch aosp_oscar-user && \
+export TZ=Asia/Dhaka && \
 croot ;\
-mka evolution ; \
+mka bacon -j$(nproc --all); \
 
 echo "Date and time:" ; \
 
