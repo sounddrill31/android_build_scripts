@@ -32,6 +32,7 @@ source build/envsetup.sh && \
 lunch lmodroid_oxygen-userdebug && \
 
 # Build the ROM
+make clean && \
 mka bacon && \
 echo "Date and time:" && \
 
