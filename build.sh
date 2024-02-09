@@ -54,7 +54,7 @@ crave pull out/target/product/*/*.zip
 crave pull out/target/product/*/*.img
 
 # Upload zips to Telegram
-telegram-upload --to sdreleases oxygen/*.zip
+telegram-upload --to sdreleases oxygen/*.zip oxygen/recovery.img
 
 #Upload to Github Releases
 # cd oxygen/
