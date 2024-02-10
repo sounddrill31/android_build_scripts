@@ -24,7 +24,7 @@ git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lmodroid-
 
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
-# git clone https://android.googlesource.com/platform/prebuilts/vndk/v32 platform/prebuilts/vndk/v32
+git clone https://android.googlesource.com/platform/prebuilts/vndk/v32 platform/prebuilts/vndk/v32
 # Set up build environment
 source build/envsetup.sh && \
 
