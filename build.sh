@@ -29,6 +29,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \
 source build/envsetup.sh && \
 
 # Add microG
+rm -rf vendor/partner_gms; \
 git clone https://github.com/lineageos4microg/android_vendor_partner_gms vendor/partner_gms; \
 export WITH_GMS=true; \
 
