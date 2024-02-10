@@ -31,7 +31,6 @@ lunch lineage_oxygen-userdebug && \
 
 # Build the ROM
 rm -rf out/target/product/oxygen/ ; \
-make clean && \
 mka bacon && \
 echo "Date and time:" && \
 
