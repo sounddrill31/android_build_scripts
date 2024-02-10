@@ -8,7 +8,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 
 
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
-crave run --no-patch -- "rm -rf .repo/manifests .repo/local_manifests platform/prebuilts/vndk/v32 prebuilts/vndk/v32 hardware/qcom-caf/msm8953/audio vendor/plros && \
+crave run --no-patch -- "rm -rf .repo/manifests .repo/local_manifests prebuilts/vndk/v32 hardware/qcom-caf/msm8953/audio vendor/plros && \
 
 # Print out Build URL
 echo "Build URL is: https://foss.crave.io/app/\#/build/info/${DCJOBID}?team=14" ; \
