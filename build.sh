@@ -28,6 +28,10 @@ git clone https://android.googlesource.com/platform/prebuilts/vndk/v32 platform/
 # Set up build environment
 source build/envsetup.sh && \
 
+# Add microG
+git clone https://github.com/lineageos4microg/android_vendor_partner_gms vendor/partner_gms; \
+export WITH_GMS=true; \
+
 # Lunch configuration
 lunch lmodroid_oxygen-userdebug && \
 
