@@ -13,7 +13,7 @@ crave run --no-patch -- "rm -rf .repo/local_manifests && \
 repo init --depth 1 -u https://github.com/sounddrill31/plros_manifests.git -b lineage-20.0 --git-lfs && \
 
 # Clone local_manifests repository
-git clone https://github.com/sounddrill31/local_manifests --depth 1 -b lineage-oxygen .repo/local_manifests && \
+git clone https://github.com/sounddrill31/local_manifests --depth 1 -b plrOS-oxygen .repo/local_manifests && \
 
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
