@@ -22,9 +22,10 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \
 rm -rf vendor/plros/prebuilt/apps/Cromite;
 git clone https://gitlab.com/plros-lab/android_packages_apps_Cromite.git vendor/plros/prebuilt/apps/Cromite && \
 
-# Clone My fork of frameworks/base
-rm -rf frameworks/base
+# Clone My forks
+rm -rf frameworks/base packages/apps/Settings && \
 git clone https://github.com/sounddrill31/plros_frameworks_base -b lineage-20.0 frameworks/base && \ 
+git clone https://github.com/sounddrill31/plros_packages_apps_Settings -b lineage-20.0 packages/apps/Settings && \
 
 # Set up build environment
 source build/envsetup.sh && \
