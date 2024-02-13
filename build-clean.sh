@@ -22,12 +22,13 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \
 # Set up build environment
 source build/envsetup.sh && \
 
+
 # Lunch configuration
 lunch aospa_oxygen-userdebug && \
 
 # Build the ROM
 rm -rf out/target/product/oxygen/ ; \
-mka bacon && \
+./rom-build.sh oxygen && \
 echo "Date and time:" && \
 
 # Print out/build_date.txt
