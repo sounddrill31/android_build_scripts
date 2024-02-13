@@ -11,23 +11,19 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 
 # Initialize repo with specified manifest
-repo init --depth 1 -u https://github.com/sounddrill31/plros_manifests.git -b lineage-20.0 --git-lfs && \
+repo init -u https://github.com/AOSPA/manifest -b uvite --depth 1 --git-lfs && \
 
 # Clone local_manifests repository
-git clone https://github.com/sounddrill31/local_manifests --depth 1 -b plrOS-oxygen .repo/local_manifests && \
+git clone https://github.com/sounddrill31/local_manifests --depth 1 -b aospa-oxygen .repo/local_manifests && \
 
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
-
-# Clone Cromite app
-rm -rf vendor/plros/prebuilt/apps/Cromite;
-git clone https://gitlab.com/plros-lab/android_packages_apps_Cromite.git vendor/plros/prebuilt/apps/Cromite && \
 
 # Set up build environment
 source build/envsetup.sh && \
 
 # Lunch configuration
-lunch lineage_oxygen-userdebug && \
+lunch aospa_oxygen-userdebug && \
 
 # Build the ROM
 rm -rf out/target/product/oxygen/ ; \
