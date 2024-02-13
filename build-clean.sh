@@ -8,7 +8,7 @@ set -e
  
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
-crave run --clean  --no-patch -- "rm -rf .repo/local_manifests && \
+crave run --clean  --no-patch -- "rm -rf .repo/local_manifests prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9 && \
 
 # Initialize repo with specified manifest
 repo init -u https://github.com/AOSPA/manifest -b uvite --depth 1 --git-lfs && \
