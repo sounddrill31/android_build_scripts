@@ -27,7 +27,7 @@ lunch aospa_oxygen-userdebug && \
 
 # Build the ROM
 rm -rf out/target/product/oxygen/ ; \
-mka bacon && \
+./rom-build.sh oxygen && \
 echo "Date and time:" && \
 
 # Print out/build_date.txt
