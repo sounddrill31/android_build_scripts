@@ -5,6 +5,7 @@ set -e
 
 # Initialize repo with specified manifest
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
+crave set --projectID 36
 
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
